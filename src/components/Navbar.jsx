@@ -13,7 +13,6 @@ const Nav = styled.nav`
   z-index: 100;
   position: fixed;
   width: 100%;
-  background: red;
 `;
 
 const NavLink = css`
@@ -33,6 +32,10 @@ const Logo = styled(Link)`
 
 const MenuBars = styled(FaBars)`
   display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 `;
 
 const NavMenu = styled.div`
@@ -70,7 +73,7 @@ const Navbar = () => {
         ))}
       </NavMenu>
       <NavBtn>
-        <Button to="/contact us" primary={true}>
+        <Button to="/contact us" primary={'true'}>
           Contact Us
         </Button>
       </NavBtn>
