@@ -6,7 +6,7 @@ import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 import { useEffect } from "react";
 const HeroSection = styled.section`
   height: 100vh;
-  max-width: 1100px;
+  max-width: 1440px;
   position: relative;
   overflow: hidden;
 `;
@@ -131,7 +131,7 @@ const Hero = ({ slides }) => {
       setCurrent((current) => (current === length - 1 ? 0 : current + 1));
 
     };
-    timeout.current = setTimeout(nextSlide, 3000);
+    timeout.current = setTimeout(nextSlide, 10000);
     return function () {
       if (timeout.current){
         clearTimeout(timeout.current)

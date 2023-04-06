@@ -32,6 +32,7 @@ const Logo = styled(Link)`
 
 const MenuBars = styled(FaBars)`
   display: none;
+  cursor: pointer;
 
   @media screen and (max-width: 768px) {
     display: block;
@@ -60,11 +61,11 @@ const NavBtn = styled.div`
     display: none;
   }
 `;
-const Navbar = () => {
+const Navbar = ({toggle}) => {
   return (
     <Nav>
       <Logo>VIVID Realty</Logo>
-      <MenuBars />
+      <MenuBars  onClick={toggle}/>
       <NavMenu>
         {menuData.map((item, index) => (
           <NavMenuLinks to={item.link} key={index}>
